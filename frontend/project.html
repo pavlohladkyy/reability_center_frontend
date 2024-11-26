@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBrecovery.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <div class="row">
+                <div class="col-md-4 d-flex align-items-center">
+                    <button class="btn-header btn-outline-light" type="button" onclick="toggleHeader()">≡</button>
+                </div>
+                <div class="col-4 d-flex align-items-center">
+                    <a class="navbar-brand" href="#">IBrecovery</a>
+                </div>
+                <div class="col-md-4 d-flex align-items-center">
+                    <div class="dropdown">
+                        <button class="btn-consultation" type="button" id="consultationButton" data-bs-toggle="modal" data-bs-target="#consultationModal">
+                          Online Консультації
+                        </button>
+                    </div>
+                    
+                    <div class="modal fade" id="consultationModal" tabindex="-1" aria-labelledby="consultationModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="consultationModalLabel">Online Консультації</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="consultationForm">
+                                        <div class="mb-3">
+                                            <label for="consultationText" class="form-label">Ваше питання:</label>
+                                            <textarea class="form-control" id="consultationText" rows="3" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Відправити</button>
+                                    </form>
+                                    <div class="alert alert-success mt-3 d-none" id="thankYouMessage">
+                                        Дякуємо за надану інформацію! Ви отримаєте відповідь через перший час.
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class = "col-md-3 ">
+                <div class = "TIME">
+                    <h6 id = "time"></h6>
+                </div> 
+            </div>
+            
+        </div>
+    </nav>
+<div id="fullHeader">
+    <nav class="nav flex-column">
+        <a class="nav-link" href="#information">About US</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#prices">Prices</a>
+        <a class="nav-link" href="#social-media">Social Media</a>
+        <a class="nav-link" href="#content">Content</a>
+        <a class="nav-link" href="#reviews">Reviews</a>
+    </nav>
+</div>
+
+<div class="container mt-3">
+    <div class="card">
+        <div class="card-body bg-dark text-white">
+            <div class="row">
+                <div class="col-md-12 text " id="information">
+                    <p>Information</p>
+                </div>
+            </div>
+            <div class="row text-center d-flex justify-content-center align-items-center">
+                <div class="col-md-5 info " id="box1">
+                    <p>Реабілітаційний центр IBrecovery – це інноваційний заклад, розташований у тихій
+                        заміській зоні, де пацієнти можуть повністю зосередитися на своєму одужанні.
+                        Центр пропонує комплексні програми відновлення після травм, операцій та тривалих 
+                        захворювань, використовуючи сучасні методи лікування та індивідуальний підхід.</p>    
+                </div>
+                <div class="col-md-5 info" id="box2">
+                    <p>Основні напрямки реабілітації в IBrecovery включають фізіотерапію, ерготерапію,
+                        лікувальний масаж та психологічну підтримку. Наша команда лікарів, фізіотерапевтів 
+                        і психологів працює над тим, щоб кожен пацієнт досягнув максимального рівня відновлення 
+                        в комфортних умовах.</p>
+                </div>
+                <div class="col-md-6 info" id="services">
+                    <p>На території центру є власний басейн, зал для лікувальної фізкультури та велика зелена 
+                        зона для прогулянок. Ми створюємо атмосферу турботи та затишку, щоб процес відновлення 
+                        проходив комфортно і максимально ефективно.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="card-body">
+            <div class="col-md-12 text" id="prices">
+                <p>Services & Prices</p>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-striped table-condensed-sm table-bordered table-hover">
+                        <tr class="table-dark">
+                            <th>Послуга</th>
+                            <th>Опис</th>
+                            <th>Ціна, грн</th>
+                        </tr>
+                        <tr>
+                            <td>Фізіотерапія</td>
+                            <td>Комплекс вправ для відновлення фізичних функцій після травм або операцій.</td>
+                            <td class="table-warning">800</td>
+                        </tr>
+                        <tr>
+                            <td>Ерготерапія</td>
+                            <td>Терапія для відновлення повсякденних навичок та покращення рухливості рук і тіла.</td>
+                            <td>700</td>
+                        </tr>
+                        <tr>
+                            <td>Лікувальний масаж</td>
+                            <td>Масаж для зняття напруги та поліпшення стану м'язів і суглобів.</td>
+                            <td>600</td>
+                        </tr>
+                        <tr>
+                            <td>Психологічна підтримка</td>
+                            <td>Консультації з психологом для емоційного відновлення та стрес-менеджменту.</td>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                            <td>Заняття в басейні</td>
+                            <td>Лікувальні заняття у воді для реабілітації.</td>
+                            <td>400</td>
+                        </tr>
+                        <tr>
+                            <td>Лікувальна фізкультура</td>
+                            <td>Індивідуальні або групові заняття для зміцнення м'язів та відновлення рухливості.</td>
+                            <td>350</td>
+                        </tr>
+                        <tr class="table-secondary">
+                            <td>Прогулянки в зеленій зоні</td>
+                            <td>Організовані прогулянки в парку для психологічного та фізичного відновлення.</td>
+                            <td>Безкоштовно</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <div class="col-md-12 text" id="social-media">
+                <p>Social Media</p>
+            </div>
+            <div class="row">
+                <div class="col-md-3 link">
+                    <a href="https://www.instagram.com/" class="btn">Instagram</a>
+                </div>
+                <div class="col-md-3 link">
+                    <a href="https://www.facebook.com/" class="btn">Facebook</a>
+                </div>
+                <div class="col-md-3 link">
+                    <a href="https://www.twitter.com/" class="btn">Twitter</a>
+                </div>
+                <div class="col-md-3 link">
+                    <a href="https://www.youtube.com/" class="btn">YouTube</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="col-md-12 text bg-white " id="content">
+                <p>Content</p>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="img/reability1.jpg" alt="photo">
+                </div>
+                <div class="col-md-6">
+                    <img src="img/reability2.jfif" alt="photo">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 video">
+                    <iframe width="400" height="600" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="img/reability3.jpg" alr = " photo">
+                </div>
+                <div class="col-md-6">
+                    <img src="img/reability4.avif" alt="photo">
+                </div>
+            </div>
+        
+            <div class="row mt-4">
+                <div class="col-md-12 ">
+                    <h5>Аудіозаписи</h5>
+                    <div class="audio-list">
+                        <audio controls>
+                            <source src="audio/record1.mp3" type="audio/mpeg">
+                            Ваш браузер не підтримує аудіо.
+                        </audio>
+                        <audio controls>
+                            <source src="audio/record2.mp3" type="audio/mpeg">
+                            Ваш браузер не підтримує аудіо.
+                        </audio>
+                        <audio controls>
+                            <source src="audio/record3.mp3" type="audio/mpeg">
+                            Ваш браузер не підтримує аудіо.
+                        </audio>
+                        <audio controls>
+                            <source src="audio/record4.mp3" type="audio/mpeg">
+                            Ваш браузер не підтримує аудіо.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-body">
+            <div class="col-md-12 text bg-white " id="reviews">
+                <p>Review</p>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="container-fluid d-flex justify-content-center align-items-center flex-column">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6 info mb-4 text-center">
+                        <img src="img/відгук.jfif" alt="reviews" class="img-fluid">
+                        <p>Я неймовірно вдячний реабілітаційному центру за підтримку та професіоналізм. Тут не тільки допомагають фізично відновитися, але й дарують емоційну підтримку, що дуже важливо в процесі одужання. Відчувається справжнє піклування!</p>
+                    </div>
+                    <div class="col-12 col-md-6 info mb-4 text-center">
+                        <img src="img/відгук2.jfif" alt="reviews" class="img-fluid">
+                        <p>Цей реабілітаційний центр справді змінив моє життя. Відчувається, що персонал дбає про кожного пацієнта. Я отримав якісну допомогу та поради, які допомогли мені швидше повернутися до звичного життя.</p>
+                    </div>
+                    <div class="col-12 col-md-6 info mb-4 text-center">
+                        <img src="img/відгук3.avif" alt="reviews" class="img-fluid">
+                        <p>Після травми я не вірив, що зможу відновити свою фізичну форму, але завдяки професіоналам цього центру мені вдалося досягти неймовірних результатів. Уважний персонал і тепла атмосфера роблять процес реабілітації комфортним і ефективним.</p>
+                    </div>
+                    <div class="col-12 col-md-6 info mb-4 text-center">
+                        <img src="img/відгук3.jpg" alt="reviews" class="img-fluid">
+                        <p>Центр став моєю другою домівкою під час лікування. Персонал дуже чуйний і компетентний, завжди готовий допомогти. Процес відновлення був нелегким, але з такою підтримкою я зміг подолати всі труднощі.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+</div>
+    
+</div>
+
+<div class="container-fluid">
+    <div class="row" style="height: 100px;">
+        <div class="col-md-12 bg-white text-center d-flex justify-content-center align-items-center">
+            <small>designed by Paul Hladkyy</small>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleHeader() {
+        const header = document.getElementById('fullHeader');
+        header.classList.toggle('show');
+    }
+
+    function displayTime(){
+
+        var currentTime = new Date();
+
+        document.getElementById("time").innerHTML = currentTime.toLocaleTimeString();
+        document.getElementById("date").innerHTML = currentTime.toLocaleDateString();
+    }
+
+    setInterval(displayTime,1000);
+</script>
+
+</body>
+</html>
